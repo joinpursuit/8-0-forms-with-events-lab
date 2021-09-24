@@ -11,16 +11,14 @@ button.setAttribute("type", "submit");
 button.textContent = "Submit";
 button.style["margin-left"] = "10px";
 
-body.append(document.createElement("hr"));
-body.append(pEl);
-
 pEl.style.display = "none";
 pEl.textContent = "Text Field Can't be Empty";
 
+body.append(document.createElement("hr"));
+body.append(pEl);
 body.append(form);
 form.append(textInput);
 form.append(button);
-
 body.append(document.createElement("ul"));
 
 button.addEventListener("click", (event) => {
