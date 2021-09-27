@@ -50,3 +50,10 @@ formQuery.addEventListener("submit", (event) => {
 });
 form.append(unOrderedList);
 
+document.querySelector("ul").addEventListener("click", (event) => {
+    event.preventDefault();
+    event.target.style["text-decoration"] = "line-through";
+  });
+
+
+
