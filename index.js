@@ -43,6 +43,16 @@ formQuery.addEventListener("submit", (event) => {
     event.target.reset()
 });
 form.append(unOrderedList);
+function contactTemplate(name) {
+    const li = document.createElement("li");
+    li.textContent += name;
+    return li;
+}
+
+document.querySelector("ul").addEventListener("click", (event) => {
+    event.preventDefault();
+    event.target.style["text-decoration"] = "line-through";
+  });
 
 
 
