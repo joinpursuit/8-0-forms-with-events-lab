@@ -1,4 +1,19 @@
 //console.log("Code your solution!")
+function contactTemplate(name) {
+    const li = document.createElement("li");
+    li.textContent += name;
+    return li;
+}
+
+function generateContact(name) {
+    const li = contactTemplate(name);
+    const ul = document.querySelector("ul");
+    ul.append(li);
+}
+
+
+
+
 const body = document.querySelector('body');
 const form = document.createElement('form');
 form.setAttribute('id', 'form-content')
@@ -34,3 +49,4 @@ formQuery.addEventListener("submit", (event) => {
     event.target.reset()
 });
 form.append(unOrderedList);
+
