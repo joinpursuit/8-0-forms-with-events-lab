@@ -12,3 +12,25 @@ input.setAttribute('name', 'userInput')
 input.setAttribute('id', 'name')
 input.setAttribute('type', 'text')
 form.append(input);
+
+
+
+const submitButn = document.createElement('button');
+submitButn.setAttribute('type', 'submit')
+submitButn.textContent = 'submit'
+
+form.append(submitButn);
+
+body.append(form);
+
+const unOrderedList = document.createElement('ul');
+form.after(unOrderedList)
+const formQuery = document.querySelector("#form-content");
+
+formQuery.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const name = event.target.userInput.value;
+    generateContact(name);
+    event.target.reset()
+});
+form.append(unOrderedList);
