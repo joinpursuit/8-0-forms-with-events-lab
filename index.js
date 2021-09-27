@@ -26,4 +26,23 @@ userForm.addEventListener("submit", (event)=>{
         errorParagraph.textContent = "Error. Todo cannot be empty"
         userForm.after(errorParagraph);
    }
+
+    /* when the user clicks on one of the `li` items,
+        the item should be crossed out, indicating
+        that the to-do is complete.
+    */
+    let listItems = document.querySelector("body ul li");
+    console.log(listItems);
+
+    /*
+    - add event listener to all `li` elements.
+    - the `li` elements have yet to be created.
+    - Only affect the `li` that was clicked on
+    */
+    listItems.addEventListener("click", (event)=>{
+        listItems.style.textDecoration = "line-through";
+    })
+
 })
+
+
