@@ -39,7 +39,7 @@ userForm.addEventListener("submit", (event)=>{
     - the `li` elements have yet to be created.
     - Only affect the `li` that was clicked on
     */
-    listItems.addEventListener("click", (event)=>{
+    listItems.addEventListener("click", ()=>{
         listItems.style.textDecoration = "line-through";
     })
 
