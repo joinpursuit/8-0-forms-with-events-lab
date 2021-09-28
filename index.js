@@ -10,6 +10,8 @@ const paragraph = document.createElement("p");
 const btn = document.createElement("button");
 input.setAttribute("type", "text");
 input.setAttribute("id", "todolist");
+btn.setAttribute("type", "submit");
+btn.textContent = "Submit";
 // const x = document.getElementById("myForm")
 
 // form.setAttribute("id", "myForm");
