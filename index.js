@@ -55,8 +55,7 @@ formQuery.addEventListener("submit", (event) => {
     //Resets the input field of above function
     event.target.reset()
 });
-//Appends ul tag to form tag
-form.append(unOrderedList);
+
 
 
 //Selects unordered list to add an EventListener w/2 arguments
