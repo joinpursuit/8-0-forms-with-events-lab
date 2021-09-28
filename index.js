@@ -42,7 +42,6 @@ userForm.addEventListener("submit", (event)=>{
     listItems.addEventListener("click", ()=>{
         listItems.style.textDecoration = "line-through";
     })
-
 })
 
 
