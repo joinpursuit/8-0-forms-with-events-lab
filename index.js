@@ -9,21 +9,20 @@ userForm.addEventListener("submit", (event)=>{
     // create new `li` element; set `textContent` to `userInput`
     let li = document.createElement("li");
     li.textContent = userInput;
-
     // append `li` to the list
     let ul = document.querySelector("ul");
     ul.append(li);
 
+    // make input field blank after each input is submitted
+    event.target["todo-field"].value = "";
+
     /* when user writes nothing in the form's text
-        input, error message (inside a `p` tag)
-        - should appear below the form
+    input, error message (inside a `p` tag)
     */
-    if (userInput === ""){
-        // make field blank
-        event.target["todo-field"].value = "";
-        // adds error paragraph message below form
+    if (!userInput){
         let errorParagraph = document.createElement("p");
         errorParagraph.textContent = "Error. Todo cannot be empty"
+        // Error message should appear below the form
         userForm.after(errorParagraph);
    }
 
