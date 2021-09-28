@@ -5,6 +5,9 @@ const hr = document.createElement("hr");
 document.body.appendChild(hr);
 const body = document.querySelector("body");
 const form = document.createElement("form");
+const input = document.createElement("INPUT");
+const paragraph = document.createElement("p");
+const btn = document.createElement("button");
 // const x = document.getElementById("myForm")
 
 // form.setAttribute("id", "myForm");
@@ -13,10 +16,10 @@ const form = document.createElement("form");
 // y.setAttribute("type", "text");
 // y.setAttribute("value", "Type a todo");
 // document.getElementById("myForm").appendChild(y);
-// const input = document.createElement("INPUT");
+// 
 // input.setAttribute("type", "submit");
 // document.body.appendChild(input);
-// const btn = document.createElement("button");
+// 
 // input.setAttribute("type", "text");
 // input.setAttribute("")
 // const t = document.createTextNode("Submit");
