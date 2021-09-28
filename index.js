@@ -1,10 +1,12 @@
 console.log("Code your solution!");
+
+let toDoList = document.querySelector("#to-do-list");
 toDoList.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  let li = document.createElement("li");
-
   let ul = document.querySelector("ul");
+
+  let li = document.createElement("li");
 
   let toDo = e.target["to-do-list"].value;
 
