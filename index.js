@@ -33,7 +33,13 @@ btn.addEventListener("click", (event)=>{
         li.textContent = input.value;
         document.querySelector("ul").appendChild(li);
     }
-})
+    form.reset();
+});
+
+document.querySelector("ul").addEventListener("click", (event)=>{
+    event.preventDefault();
+    event.target.style["text-decoration"] = "line-through";
+});
 
 
 // const ul = document.createElement("ul");
