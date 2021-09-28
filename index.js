@@ -30,6 +30,8 @@ btn.addEventListener("click", (event)=>{
     } else if (input.value.length > 0) {
         paragraph.style.display = "none";
         let li = document.createElement("li");
+        li.textContent = input.value;
+        document.querySelector("ul").appendChild(li);
     }
 })
 
