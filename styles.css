@@ -1,0 +1,35 @@
+body{
+    background-color: beige;
+    text-align: center;
+}
+li {
+    list-style-type: none;
+    padding: 10px;
+    margin: 10px;
+    border: 2px dotted beige;
+
+}
+li:hover {
+    list-style-type: upper-roman;
+    padding: 10px;
+    margin: 10px;
+    border: 2px dotted black;
+}
+p {
+    color: red;
+}
+textarea {
+    width: 250px;
+    height: 50px;
+    padding: 10px
+}
+button{
+    background-color: beige;
+    border-radius: 50%;
+    width: 10em;
+    height: 2em;
+}
+button:hover {
+    background-color: white;
+    transform: scale(1.2);
+}
