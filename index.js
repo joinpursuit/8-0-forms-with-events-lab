@@ -3,8 +3,10 @@ const heading = document.querySelector("h1");
 heading.innerHTML = "Todos";
 const hr = document.createElement("hr");
 document.body.appendChild(hr);
+const body = document.querySelector("body");
+const form = document.createElement("form");
 // const x = document.getElementById("myForm")
-// const form = document.createElement("form");
+
 // form.setAttribute("id", "myForm");
 // document.body.appendChild(form);
 // const y = document.createElement("input");
