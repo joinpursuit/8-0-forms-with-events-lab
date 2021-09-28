@@ -1,0 +1,40 @@
+
+/*  ROKKITT for headings*/
+
+h1, h2, h3, h4, h5, h6 {
+
+font-family: 'Rokkitt', serif;
+}
+
+/* RALEWAY for P */
+
+p {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* change li to RALEWAY */
+
+#user-form ul {
+    font-family: 'Raleway', sans-serif;
+}
+
+#listContents {
+    border: 2px black solid;
+    width: 250px;
+    padding: 10px;
+}
+
+#button-add {
+    background-color: white;
+    border: 3px black solid;
+    width: 100px;
+    padding: 10px;
+}
+
+#button-add:hover {
+    color: white;
+    background-color: black;
+    border: 3px white solid;
+    width: 100px;
+    padding: 10px;
+}
