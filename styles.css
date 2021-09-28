@@ -23,13 +23,26 @@ textarea {
     height: 50px;
     padding: 10px
 }
-button{
+#addButton{
     background-color: beige;
     border-radius: 50%;
     width: 10em;
     height: 2em;
 }
-button:hover {
+#addButton:hover {
     background-color: white;
     transform: scale(1.2);
+} 
+#deleteBut {
+    background-color: beige;
+    border-radius: 50%;
+    width: 8em;
+    height: 12m;
+    padding: 1px;
+    margin-left: 100px;
+}
+#deleteBut:hover {
+    background-color: white;
+    transform: scale(1.2);
+
 }
