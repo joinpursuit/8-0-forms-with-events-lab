@@ -12,6 +12,9 @@ input.setAttribute("type", "text");
 input.setAttribute("id", "todolist");
 btn.setAttribute("type", "submit");
 btn.textContent = "Submit";
+document.body.append(paragraph);
+paragraph.style.display="Type a todo";
+paragraph.textContent = "Error! Todo cannot be empty"
 // const x = document.getElementById("myForm")
 
 // form.setAttribute("id", "myForm");
