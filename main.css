@@ -11,7 +11,7 @@ label {
   display: block;
 }
 
-input {
+button {
   font-family: Impact, "Arial Narrow Bold", sans-serif;
   font-size: 15px;
   background-color: rgb(2, 170, 2);
@@ -22,7 +22,7 @@ input {
   transition: 0.3s;
 }
 
-input:hover {
+button:hover {
   background-color: rgb(240, 240, 240);
   color: black;
 }
@@ -46,4 +46,17 @@ span {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: gray;
   vertical-align: 30%;
+}
+
+ul {
+  padding: 0px;
+}
+
+li {
+  list-style: none;
+}
+
+.trash {
+  vertical-align: 0%;
+  margin: 0px 8px;
 }
