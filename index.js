@@ -6,13 +6,16 @@ form.addEventListener("submit", (event) => {
     const newTodo = document.createElement("li");
     newTodo.textContent = event.target.todo.value;
     newTodo.addEventListener("click", () => {
-      newTodo.style.textDecoration = "line-through";
+      if (newTodo.style.textDecoration === "none") {
+        newTodo.style.textDecoration = "line-through";
+      } else {
+        newTodo.style.textDecoration = "none";
+      }
     });
-    // event.target.todo.value = "";
-    form.reset();
     document.querySelector("ul").append(newTodo);
   } else {
     document.querySelector("p").textContent = "Error. Todo cannot be empty";
-    form.reset();
   }
+  // event.target.todo.value = "";
+  form.reset();
 });
