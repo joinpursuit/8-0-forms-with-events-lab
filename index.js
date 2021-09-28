@@ -14,7 +14,10 @@ btn.setAttribute("type", "submit");
 btn.textContent = "Submit";
 document.body.append(paragraph);
 paragraph.style.display="Type a todo";
-paragraph.textContent = "Error! Todo cannot be empty"
+paragraph.textContent = "Error! Todo cannot be empty";
+document.body.append(form);
+form.append(paragraph);
+form.append(btn);
 // const x = document.getElementById("myForm")
 
 // form.setAttribute("id", "myForm");
