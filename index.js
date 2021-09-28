@@ -10,7 +10,7 @@ const form = document.createElement("form");
 const btn = document.createElement("button");
     btn.setAttribute("type", "submit");
     btn.textContent = "Submit";
-    btn.style["margin-left"] = "12px";
+    btn.style["margin-left"] = "8px";
 
 const input = document.createElement("INPUT");
     input.setAttribute("type", "text");
@@ -25,6 +25,9 @@ body.append(document.createElement("ul"));
 
 btn.addEventListener("click", (event)=>{
     event.preventDefault();
+    if(input.value.length === 0 && paragraph.style.display === "none"){
+        paragraph.style.display = "block";
+    }
 })
 
 
