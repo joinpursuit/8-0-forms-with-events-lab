@@ -16,9 +16,7 @@ userForm.addEventListener("submit", (event)=>{
     // make input field blank after each input is submitted
     event.target["todo-field"].value = "";
 
-    /* when user writes nothing in the form's text
-    input, error message (inside a `p` tag)
-    */
+    /* when user writes nothing in the form's text input, error message (inside a `p` tag) */
     if (!userInput){
         let errorParagraph = document.createElement("p");
         errorParagraph.textContent = "Error. Todo cannot be empty"
@@ -26,21 +24,12 @@ userForm.addEventListener("submit", (event)=>{
         userForm.after(errorParagraph);
    }
 
-    /* when the user clicks on one of the `li` items,
-        the item should be crossed out, indicating
-        that the to-do is complete.
-    */
-    let listItems = document.querySelector("body ul li");
+    /* when the user clicks on one of the `li` items, the item should be crossed out, indicating that the to-do is complete. */
+    let listItems = document.querySelector("ul li");
     console.log(listItems);
 
-    /*
-    - add event listener to all `li` elements.
-    - the `li` elements have yet to be created.
-    - Only affect the `li` that was clicked on
-    */
+    /* add event listener to all `li` elements. The `li` elements have yet to be created. Only affect the `li` that was clicked on */
     listItems.addEventListener("click", ()=>{
         listItems.style.textDecoration = "line-through";
     })
 })
-
-
