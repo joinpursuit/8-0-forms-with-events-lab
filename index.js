@@ -27,6 +27,9 @@ btn.addEventListener("click", (event)=>{
     event.preventDefault();
     if(input.value.length === 0 && paragraph.style.display === "none"){
         paragraph.style.display = "block";
+    } else if (input.value.length > 0) {
+        paragraph.style.display = "none";
+        let li = document.createElement("li");
     }
 })
 
