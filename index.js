@@ -9,16 +9,9 @@ form.addEventListener("submit", (event)=>{
     //create a new list
     let newLi = document.createElement("li");
     newLi.textContent = event.target["name-field"].value
-
-    //IGNORE ~~~ FOR MY OWN UNDERSTANDING
-    //adds userInput valuse into "ul" as a list item 
     unordered.append(newLi)
-    //selects the form tag 
-    console.log("This thing give form", event.target)
-    //selects the submit box
-    console.log("", event.target["name-field"]) 
-    //selects the value of the submit box (.value not .textContent)
-    console.log("trigger", event.target["name-field"].value)
-    //IGNORE ~~~ FOR MY OWN UNDERSTANDING
+    
+    newLi.addEventListener("click", (event)=>{
+        event.target.style.textDecoration = "line-through"
+    })
 })
-
