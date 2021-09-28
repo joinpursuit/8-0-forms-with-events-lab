@@ -1,0 +1,22 @@
+body {
+  background-color: bisque;
+}
+
+h1 {
+  font-family: "Courier New", Courier, monospace;
+  color: chocolate;
+}
+
+ul li {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: large;
+}
+
+button {
+  color: darkslateblue;
+}
+
+p {
+  font-weight: bold;
+  font-size: medium;
+}
