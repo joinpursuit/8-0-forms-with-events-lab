@@ -23,7 +23,9 @@ form.append(input);
 form.append(btn);
 body.append(document.createElement("ul")); 
 
-
+btn.addEventListener("click", (event)=>{
+    event.preventDefault();
+})
 
 
 // const ul = document.createElement("ul");
