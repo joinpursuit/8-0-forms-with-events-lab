@@ -8,8 +8,8 @@ form.addEventListener("submit", (event)=> {
     let userInput = event.target["textarea"].value; 
     if(!userInput) {
         let message = document.createElement("p");
-        message.textContent = "User input cannot be empty! Please type again!";
-        form.prepend(message);
+        message.textContent = "User input cannot be empty! Please try again!";
+        ul.after(message);
     } else {
         let list = document.createElement("li");
         list.textContent = userInput;
