@@ -6,7 +6,7 @@ form.addEventListener("submit", (event) => {
     const newTodo = document.createElement("li");
     newTodo.textContent = event.target.todo.value;
     newTodo.addEventListener("click", () => {
-      if (newTodo.style.textDecoration === "none") {
+      if (newTodo.style.textDecoration !== "line-through") {
         newTodo.style.textDecoration = "line-through";
       } else {
         newTodo.style.textDecoration = "none";
