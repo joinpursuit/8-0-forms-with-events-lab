@@ -14,14 +14,14 @@ todoForm.addEventListener('submit', (event) => {
         listItem.textContent = userInput;
         userList.append(listItem);
         
-        let deleteButton = document.createElement('button');
-        deleteButton.setAttribute('type', 'submit');
-        deleteButton.textContent = 'Delete';
-        listItem.append(deleteButton);
+        // let deleteButton = document.createElement('button');
+        // deleteButton.setAttribute('type', 'submit');
+        // deleteButton.textContent = 'Delete';
+        // listItem.append(deleteButton);
         event.target['list-item'].value = "";
-        deleteButton.addEventListener('click', () => {
-            listItem.remove();
-        });
+        // deleteButton.addEventListener('click', () => {
+        //     listItem.remove();
+        // });
     }
 
     let todoItems = document.querySelectorAll('li');
@@ -43,15 +43,8 @@ todoForm.addEventListener('submit', (event) => {
     // }
 
     for (let li of todoItems) {
-        console.log(li.style.textDecoration)
-        if (li.style.textDecoration === '') {
-            li.addEventListener('click', () => {
-                li.style.textDecoration = 'line-through';
-            });
-        } else if (li.style.textDecoration === 'line-through') {
-            li.addEventListener('click', () => {
-                li.style.textDecoration = 'none';
+        li.addEventListener('click', () => {
+            li.style.textDecoration = 'line-through';
             });
         }
-    }
 });
