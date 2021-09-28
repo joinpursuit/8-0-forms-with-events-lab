@@ -1,16 +1,35 @@
-console.log("Code your solution!")
+
 let userForm = document.querySelector("#inputForm");
-let unorderedList = document.querySelector("ul");
-let listItems = document.createElement("li");
-let strikeThrough = document.querySelector("li");//not sure if I have to select after creating listItems
+
+let pTag = document.createElement("p")
 
 userForm.addEventListener("submit", (event)=>{
     event.preventDefault();
+    let userInput = event.target["toDoList"].value
 
-    listItems.textContent = event.target["addList"].value// adds only 1 list item does not reset 
-    unorderedList.append(listItems);
+    if(!userInput){
+        pTag.textContent = "Please enter an item";
+         userForm.after(pTag);
+    } else {
+        let unorderedList = document.querySelector("ul");
+        let listItem = document.createElement("li");
+        listItem.textContent = userInput;
+
+        listItem.addEventListener("click", (event)=>{
+            if(!event.target.style.textDecoration) {
+                event.target.style.textDecoration = "line-through";
+            } else {
+                event.target.style.textDecoration = "none"; 
+            }
+
+         });
+
+        unorderedList.append(listItem);
+        pTag.remove()
+        event.target["toDoList"].value = "";
+    }
+
 });
 
-// strikeThrough.addEventListener("click", (event)=>{// attempting line through clicked li
-//     event.target["text-decoration"]= line-through solid rgb(0, 0, 0);
-// })
+
+
