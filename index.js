@@ -8,16 +8,19 @@ const form = document.createElement("form");
 const input = document.createElement("INPUT");
 const paragraph = document.createElement("p");
 const btn = document.createElement("button");
+const ul = document.createElement("ul");
 input.setAttribute("type", "text");
 input.setAttribute("id", "todolist");
 btn.setAttribute("type", "submit");
 btn.textContent = "Submit";
 document.body.append(paragraph);
-paragraph.style.display="Type a todo";
+paragraph.style.display="none";
 paragraph.textContent = "Error! Todo cannot be empty";
 document.body.append(form);
 form.append(paragraph);
 form.append(btn);
+document.body.append(ul);
+
 // const x = document.getElementById("myForm")
 
 // form.setAttribute("id", "myForm");
