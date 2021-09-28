@@ -9,20 +9,21 @@
     <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <h1>Done & Done! ✅ To-Do List App</h1>
+    <h1>Done & Done! ✅ To-Do List</h1>
     <hr />
     <form>
-      <label>
-        What would you like to do?
-        <input
-          id="to-do"
-          name="to-do"
-          type="text"
-          placeholder="Enter your to-do..."
-          required
-        />
-      </label>
-      <input type="submit" value="➕" />
+      <label for="to-do"> What would you like to do? </label>
+      <input type="submit" value="+" />
+      <textarea
+        id="to-do"
+        name="to-do"
+        cols="30"
+        rows="1"
+        placeholder="Enter your to-do..."
+        maxlength="30"
+        required
+      ></textarea>
+      <span id="count"></span>
     </form>
     <ul></ul>
   </body>
