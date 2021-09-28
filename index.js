@@ -8,6 +8,8 @@ const form = document.createElement("form");
 const input = document.createElement("INPUT");
 const paragraph = document.createElement("p");
 const btn = document.createElement("button");
+input.setAttribute("type", "text");
+input.setAttribute("id", "todolist");
 // const x = document.getElementById("myForm")
 
 // form.setAttribute("id", "myForm");
