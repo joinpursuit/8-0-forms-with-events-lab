@@ -41,7 +41,8 @@ textarea:focus {
   background-color: white;
 }
 
-span {
+span,
+.trash {
   font-size: 10px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: gray;
@@ -59,4 +60,10 @@ li {
 .trash {
   vertical-align: 0%;
   margin: 0px 8px;
+}
+
+/* OR TOGGLE style text via CSS classList /JS */
+
+.cross-text {
+  text-decoration: line-through solid black;
 }
