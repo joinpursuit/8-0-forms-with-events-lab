@@ -1,0 +1,15 @@
+body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+  }
+  
+  .dark-mode {
+    background-color: black;
+    color: white;
+  }
+
+  .cross-out {
+      text-decoration: line-through solid rgb(0,0,0);
+  }
