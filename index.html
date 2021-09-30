@@ -12,17 +12,18 @@
         <input type="text" class="textbox" placeholder="Add tasks here &#128221">
 
         <div class="notcomplete">
-          <h3> Not Complete </h3>
+          <h3> Not Completed </h3>
           <div class="task">
-            eg: walk the dog
+            task eg: ...study, study, study!
             <i class="fas fa-trash-alt"></i>
             <i class="fas fa-check"></i>
           </div>
         </div>
 
           <div class="complete">
-            <h3> Complete </h3>
-          <!-- <div class="task"></div>
+            <h3> Completed </h3>
+          <!-- Below shows list of completed tasks to make sure its working
+          <div class="task"></div>
             task
             <i class="fas fa-trash-alt"></i>
 
@@ -41,27 +42,27 @@
     </div>
       <script type="text/javascript">
         $(".textbox").on("keyup",function(e) {
-          //13 => enter button
+          //13 => means enter button
           if(e.keyCode == 13 && $(".textbox").val() !== "")
           { 
-            let task = $("<div class='task'></div>").text($(".textbox").val());
-            let erase = $("<i class='fas fa-trash-alt'></i>").click(function() {
-              let entry = $(this).parent();
-              entry.fadeOut(function() {
+            var task = $("<div class='task'></div>").text($(".textbox").val());
+            var erase = $("<i class='fas fa-trash-alt'></i>").click(function(){
+              var entry = $(this).parent();
+              entry.fadeOut(function(){
                 entry.remove();
               });
             });
 
-            let check = $("<i class='fas fa-check'></i>").click(function(){
-              let entry = $(this).parent();
+            var check = $("<i class='fas fa-check'></i>").click(function(){
+              var entry = $(this).parent();
               entry.fadeOut(function() {
                 $("complete").append(entry);
                 entry.fadeIn();
+            });
+            $(this).remove();
           });
-          $(this).remove();
-        });
 
-            task.append(erase, check);
+            task.append(erase,check);
             $(".notcomplete").append(task);
               //to clear input
               $(".textbox").val("");
