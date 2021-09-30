@@ -56,7 +56,7 @@
             var check = $("<i class='fas fa-check'></i>").click(function(){
               var entry = $(this).parent();
               entry.fadeOut(function() {
-                $("complete").append(entry);
+                $(".complete").append(entry);
                 entry.fadeIn();
             });
             $(this).remove();
