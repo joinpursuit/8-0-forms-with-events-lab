@@ -1,20 +1,73 @@
-<html>
+<html lang="en" dir="ltr">
     <head>
-      <script defer src="index.js"></script>
-      <link rel="stylesheet" href="styles.css">
+      <meta charset="utf-8">
+      <title></title>
+      <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+      <script src ="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     </head>
     <body>
-      <h1> CODE YOUR SOLUTION </h1> 
-        <h1> My To-Dos </h1> 
 
-      <form id = "todoForm">
-        <label for= "todo">
-        <input id= "todo" name="todo" type="text" placeholder="Add daily tasks here"/> 
-          <!-- <h3>Tasks Not Complete</h3>  -->
-          <button type="submit">Submit</button>
-        </label>
-      </form>
+      <div class="container">
+        <input type="text" class="textbox" placeholder="Add tasks here &#128221">
+
+        <div class="notcomplete">
+          <h3> Not Complete </h3>
+          <div class="task">
+            ex: walk the dog ...
+            <i class="fas fa-trash-alt"></i>
+            <i class="fas fa-check"></i>
+          </div>
+        </div>
+
+          <div class="complete">
+            <h3> Complete </h3>
+          <!-- <div class="task"></div>
+            task
+            <i class="fas fa-trash-alt"></i>
+
+            <div class="task"></div>
+            task
+            <i class="fas fa-trash-alt"></i> -->
+                 
+<!-- 
+          <div class="task">
+            task
+            <i class="fas fa-trash-alt"></i>
+            <i class="fas fa-check"></i>
+          </div> 
+        </div> -->
+      </div>
+    </div>
+      <script type="text/javascript">
+        $(".textbox").on("keyup",function(e) {
+          //13 => enter button
+          if(e.keyCode == 13 && $(".textbox").val() !== "")
+          { 
+            let task = $("<div class='task'></div>").text($(".textbox").val());
+            let erase = $("<i class='fas fa-trash-alt'></i>").click(function() {
+              let entry = $(this).parent();
+              entry.fadeOut(function() {
+                entry.remove();
+              });
+            });
+
+            let check = $("<i class='fas fa-check'></i>").click(function(){
+              let entry = $(this).parent();
+              entry.fadeOut(function() {
+                $("complete").append(entry);
+                entry.fadeIn();
+          });
+          $(this).remove();
+        });
+
+            task.append(erase, check);
+            $(".notcomplete").append(task);
+              //to clear input
+              $(".textbox").val("");
+          };
+        });
+      </script>
       
-      <ul id="items"></ul>
     </body>
 </html>
