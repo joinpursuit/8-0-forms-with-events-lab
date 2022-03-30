@@ -15,10 +15,28 @@ form.addEventListener("submit", (event) => {
     document.querySelector("#errorMessage").textContent = "";
     let li = document.createElement("li");
     // When the user clicks on one of the li items, the item should be crossed out, indicating that that to-do is complete.
+    // Clicking a todo that is crossed out (completed) uncrosses the todo.
+    let unCrossed = true;
     li.addEventListener("click", (event) => {
-      event.target.style.textDecoration = "line-through";
+      if (unCrossed) {
+        event.target.style.textDecoration = "line-through";
+        unCrossed = false;
+      } else {
+        event.target.style.textDecoration = "none";
+        unCrossed = true;
+      }
     });
     li.textContent = todo.value;
+    // Implement a delete button next to each li that removes that li tag entirely.
+    let removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+    removeButton.addEventListener("click", (event) => {
+      li.remove();
+      event.target.remove();
+    });
     ul.append(li);
+    li.after(removeButton);
+    // Have the input go back to empty after adding a new todo.
+    todo.value = "";
   }
 });
