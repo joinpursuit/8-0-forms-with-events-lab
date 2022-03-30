@@ -1,8 +1,14 @@
 <html>
-    <head>
-      <script src="index.js"></script>
-    </head>
-    <body>
-      <h1> CODE YOUR SOLUTION </h1>      
-    </body>
+  <head>
+    <script defer src="index.js"></script>
+  </head>
+  <body>
+    <h1 id="title">My To-Dos</h1>
+    <form id="toDo">
+      <textarea type="text" name="inputItem" id="inputItem"></textarea>
+      <button type="submit" id="addItem">Add To List</button>
+      <p id="errorMessage"></p>
+      <ul id="toDoList"></ul>
+    </form>
+  </body>
 </html>
