@@ -2,9 +2,9 @@ console.log("Code your solution!")
 
 let form = document.getElementById("to-do");
 let list = document.querySelector("ul");
-//let input = document.getElementById("text");
+
 form.addEventListener("submit", (event) => {
-  event.preventDefault(); //prevent reload on submit
+  event.preventDefault(); 
   if (!event.target.value) {
     let error = document.createElement("p");
     error.textContent = "Error";
