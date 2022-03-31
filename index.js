@@ -29,15 +29,13 @@ form.addEventListener('submit', (e) => {
         });
         // => Delete task
         if(tasks.innerHTML!==""){
-            for(let task of tasks.childNodes){
-                const deleteBtns = document.querySelectorAll('#tasks li button');
-                for(let btn of deleteBtns){
-                    btn.addEventListener('click', (e) => {
-                        e.preventDefault();
-                        btn.closest('li').remove();
-                        taskInput.focus();
-                    })
-                }
+            const deleteBtns = document.querySelectorAll('#tasks li button');
+            for(let btn of deleteBtns){
+                btn.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    btn.closest('li').remove();
+                    taskInput.focus();
+                })
             }
         }
         
