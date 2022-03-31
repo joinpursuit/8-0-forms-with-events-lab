@@ -1,17 +1,22 @@
 //console.log('Code your solution!');
 
 const form = document.getElementById('todo-list');
+const unordered = document.querySelector('ul');
 
 form.addEventListener('submit', (event) => {
   event.preventDefault(); // no refresh
 
-  let inputted = event.target.todo.value;
-     console.log(inputted)
-     console.log(typeof inputted)
+  const inputted = event.target.todo.value;
 
-  const unordered = document.querySelector('ul');
+  // error message setup
+  // if (!event.target.value) {
+  //   let errorP = document.createElement('p');
+  //   errorP.textContent = 'Error: need input!';
+  //  unordered.before(errorP)
+  //   console.log(errorP);
+  // }
+
   const newListItem = document.createElement('li');
-  
   newListItem.textContent = inputted;
   unordered.append(newListItem);
   event.target.reset();
