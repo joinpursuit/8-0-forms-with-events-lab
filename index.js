@@ -37,6 +37,8 @@ toDo.addEventListener("submit", (e) => {
 
     deleteItem.addEventListener("click", (e) => {
       e.preventDefault();
+
+      listItem.parentNode.removeChild(listItem);
     });
   }
 });
