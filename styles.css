@@ -1,0 +1,12 @@
+h1 {
+  font-family: Courier;
+  font-weight: bold;
+  text-decoration: solid black underline;
+}
+li {
+  font-style: italic;
+}
+label {
+  font-family: Courier;
+  font-weight: bold;
+}
