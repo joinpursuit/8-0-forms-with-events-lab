@@ -1,42 +1,49 @@
 
 
-const taskInput = document.querySelector('textarea');
-const tasks = document.querySelector('#tasks');
-const error = document.querySelector('p');
+const taskInput = document.querySelector('textarea'),
+      tasks     = document.querySelector('#tasks');
+      error     = document.querySelector('p');
+      form      = document.getElementById('new-task');
+taskInput.focus();
 // Adding new task to the list
-const form = document.getElementById('new-task');
 form.addEventListener('submit', (e) => {
     e.preventDefault();
     
     if(taskInput.value){
         const task = document.createElement("li");
+        const taskData = document.createElement('span');
         let deleteBtn = document.createElement("button");
         deleteBtn.innerHTML = "Delete Task";
-        task.appendChild(document.createTextNode(taskInput.value)).after(deleteBtn);
+        //task.appendChild(document.createTextNode(taskInput.value)).after(deleteBtn);
+        taskData.innerText = taskInput.value;
+        task.appendChild(taskData).after(deleteBtn);
         tasks.append(task)
         taskInput.value = '';
+        taskInput.focus();
         error.textContent = '';
 
         // Binding events to list itmes 
-        task.addEventListener("click", () => {
-            task.setAttribute(`style`, `text-decoration: line-through`)
+        // => Strike task
+        taskData.addEventListener("click", () => {
+            taskData.setAttribute(`style`, `text-decoration: line-through`)
         });
-
+        // => Delete task
+        if(tasks.innerHTML!==""){
+            for(let task of tasks.childNodes){
+                const deleteBtns = document.querySelectorAll('#tasks li button');
+                for(let btn of deleteBtns){
+                    btn.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        btn.closest('li').remove();
+                        taskInput.focus();
+                    })
+                }
+            }
+        }
         
     }else{
         error.textContent = 'Error. Todo cannot be empty';
     }
 }) 
 console.log('>' +tasks.innerHTML)
-if(tasks.innerHTML!==""){
-    console.log(tasks.innerHTML)
-    console.log(tasks)
-    for(let task of tasks){
-        const taskDelete = document.querySelector('#tasks li button');
-        taskDelete.addEventListener('click', (e) => {
-            e.preventDefault();
-            console.log('>>>')
-            this.remove();
-        })
-    }
-}
+
