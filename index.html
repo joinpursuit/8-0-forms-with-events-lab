@@ -5,15 +5,11 @@
     </head>
     <body>
       <h1>My To-Dos App</h1>  
-      <form>
-        <label>
-          <input type="text" id="todo" name="todo" size="50" placeholder="Don't let your dreams be dreams..." />
-        </label>
-        <label>
-          <button type="submit" id="submit">Do it!</button>
-        </label>
+      
+      <form id="new-task">
+        <textarea name="name" required></textarea>
+        <button type="submit">Submit</button>
       </form>
-      <p></p>
-      <ul></ul>
+      <ul id="list"></ul>
     </body>
 </html>
