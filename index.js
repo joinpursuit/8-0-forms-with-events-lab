@@ -19,7 +19,6 @@ form.addEventListener("submit", (event) => {
 
   task.addEventListener("click", () => {
     task.style.textDecoration = "line-through";
-    task.style.color = "rgb(200, 8, 0)";
   });
 
   task.addEventListener("mouseover", () => {
