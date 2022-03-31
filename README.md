@@ -34,24 +34,24 @@ This will open the Cypress testing window, where you can click to run an individ
 
 Our app will have the following items:
 
-- An `h1` title (e.g. "My To-Dos").
-- A single `ul` tag, empty when the page is first loaded.
-- A `form` for the user to add a new to-do, with a single text `input` and a `submit` button.
+[ok]- An `h1` title (e.g. "My To-Dos").
+[ok]- A single `ul` tag, empty when the page is first loaded.
+[ok]- A `form` for the user to add a new to-do, with a single text `input` and a `submit` button.
 
 And the following functionalities:
 
-- When the user writes something in the `form`'s text input area and clicks `submit`, the `ul` should update with a new `li` item at the bottom of the list. The page **should not refresh**.
+[]- When the user writes something in the `form`'s text input area and clicks `submit`, the `ul` should update with a new `li` item at the bottom of the list. The page **should not refresh**.
 
   <details>
     <summary>
       Hints/Steps
     </summary>
 
-  1. Add an event listener to the form with `.addEventListener`. What event do you want to listen for?
-  2. Remember, what does `event.preventDefault()` do?
-  3. Grab the value the user typed from the text input. Do you remember what property of the input node has this? If not Google it or ask a peer.
-  4. Create new `li` element with `document.createElement()`. Set its `textContent` property to be the text the user typed.
-  5. Don't forget to append the created `li` to the list.
+1. Add an event listener to the form with `.addEventListener`. What event do you want to listen for?
+2. Remember, what does `event.preventDefault()` do?
+3. Grab the value the user typed from the text input. Do you remember what property of the input node has this? If not Google it or ask a peer.
+4. Create new `li` element with `document.createElement()`. Set its `textContent` property to be the text the user typed.
+5. Don't forget to append the created `li` to the list.
 
   </details>
 

@@ -1,5 +1,3 @@
-#list {
-}
-#list li {
+.striked {
 	text-decoration: line-through;
 }
