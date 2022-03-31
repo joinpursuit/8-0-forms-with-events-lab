@@ -1,6 +1,119 @@
+body {
+	background-color: #5db7de;
+}
+main {
+	width: 50%;
+	padding: 5rem;
+	margin: 10rem auto;
+	background-color: #fff;
+	border: 10px solid #9999;
+	border-radius: 2rem;
+	box-sizing: border-box;
+}
 h1 {
+	font-family: 'Erica One', cursive;
+	font-size: 3rem;
+	text-align: center;
 	font-weight: bold;
+	color: #2ab7ca;
+}
+h1 b {
+	padding: 26px 20px;
+	background-color: #fed766;
+	border-radius: 1rem;
+	box-shadow: 6px 6px #9999;
+	font-size: 3.8rem;
+	text-shadow: 1px 5px 5px #333;
+	color: #fff;
+}
+form {
+	padding: 4rem;
+	background-color: #fff;
+	border: 0px solid #9999;
+	text-align: center;
+	box-sizing: border-box;
+}
+form textarea {
+	width: -webkit-fill-available;
+	min-height: 30%;
+	padding: 10px;
+	background-color: #fff;
+	border: 10px solid #f4f4f8;
+	border-radius: 1px;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: #333;
+}
+form button {
+	padding: 1rem 4rem;
+	margin: 2rem auto;
+	background-color: #2ab7ca;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.4rem;
+	font-weight: bold;
+	text-align: center;
+	color: #fff;
+	border: none;
+}
+form button:hover {
+	background-color: #1f8d9b;
+	cursor: pointer;
+}
+.error {
+	padding: 2rem;
+	text-align: center;
+	background-color: #fe4a49;
+	border-radius: 1rem;
+}
+.error span {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.4rem;
+	font-weight: bold;
+	color: #fff;
+	animation: blink 2s infinite;
+}
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 .striked {
 	text-decoration: line-through;
+}
+ul {
+	padding: 0;
+	list-style: none;
+}
+ul li {
+	padding: 10px 10px;
+	margin: 5px 0;
+	background-color: #f4f4f8;
+}
+ul li span {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1.4rem;
+	font-weight: 400;
+	color: #333;
+}
+ul li button {
+	padding: 5px 10px;
+	margin: 0;
+	float: right;
+	background-color: #fed766;
+	font-family: 'Open Sans', sans-serif;
+	font-size: 1rem;
+	font-weight: bold;
+	color: #fff;
+	border: none;
+}
+ul li button:hover {
+	background-color: #f0bc1f;
+	cursor: pointer;
 }

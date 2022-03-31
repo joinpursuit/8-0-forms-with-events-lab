@@ -21,12 +21,12 @@ form.addEventListener('submit', (e) => {
         taskInput.value = '';
         taskInput.focus();
         error.textContent = '';
+        error.classList.remove('error');
 
         // Binding events to list itmes 
         // => Strike task
         task.addEventListener("click", () => {
             task.setAttribute(`style`, `text-decoration: line-through`)
-            //task.classList.add('striked');
         });
         // => Delete task
         if(tasks.innerHTML!==""){
@@ -41,7 +41,9 @@ form.addEventListener('submit', (e) => {
         }
         
     }else{
-        error.textContent = 'Error. Todo cannot be empty';
+        error.classList.add('error');
+        error.innerHTML = '<span>Error. Todo cannot be empty</span>';
+        taskInput.focus();
     }
 }) 
 console.log('>' +tasks.innerHTML)
