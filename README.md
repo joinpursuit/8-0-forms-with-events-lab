@@ -40,7 +40,7 @@ Our app will have the following items:
 
 And the following functionalities:
 
-[]- When the user writes something in the `form`'s text input area and clicks `submit`, the `ul` should update with a new `li` item at the bottom of the list. The page **should not refresh**.
+[ok]- When the user writes something in the `form`'s text input area and clicks `submit`, the `ul` should update with a new `li` item at the bottom of the list. The page **should not refresh**.
 
   <details>
     <summary>
@@ -55,27 +55,27 @@ And the following functionalities:
 
   </details>
 
-- When the user writes _nothing_ in the `form`'s text input area and clicks `submit`, an error message (inside a `p` tag) should appear below the form.
+[ok]- When the user writes _nothing_ in the `form`'s text input area and clicks `submit`, an error message (inside a `p` tag) should appear below the form.
 
   <details>
     <summary>
       Hints/Steps
     </summary>
 
-  1. How can you check if the input text has something typed or not?
-  2. Have an empty paragraph that is above the `<ul>` and under the `<form>`. If the user didn't type anything, modify the content of the paragraph to display a text like: 'Error. Todo cannot be empty'
+1. How can you check if the input text has something typed or not?
+2. Have an empty paragraph that is above the `<ul>` and under the `<form>`. If the user didn't type anything, modify the content of the paragraph to display a text like: 'Error. Todo cannot be empty'
 
   </details>
 
-- When the user clicks on one of the `li` items, the item should be crossed out, indicating that that to-do is complete. You will need to look at [`[element].style.textDecoration`](https://www.w3schools.com/jsref/prop_style_textdecoration.asp) for the cross out effect. Look at all the different text decoration options.
+[ok]- When the user clicks on one of the `li` items, the item should be crossed out, indicating that that to-do is complete. You will need to look at [`[element].style.textDecoration`](https://www.w3schools.com/jsref/prop_style_textdecoration.asp) for the cross out effect. Look at all the different text decoration options.
 
   <details>
     <summary>
       Hints/Steps
     </summary>
 
-  1. You will need to add an event listener to all the `li` elements. Those `li` elements have yet to be created. How can you add an event listener to these?
-  2. How can you only affect the `li` that was clicked on?
+1. You will need to add an event listener to all the `li` elements. Those `li` elements have yet to be created. How can you add an event listener to these?
+2. How can you only affect the `li` that was clicked on?
 
   </details>
 
@@ -85,8 +85,8 @@ And the following functionalities:
 
 ## Bonus Tasks
 
-- Have the input go back to empty after adding a new todo.
-- Implement a delete `button` next to each `li` that removes that `li` tag entirely.
-- Clicking a todo that is crossed out (completed) uncrosses the todo.
-- Add the ability to add multiple to-dos if the user submits a text input with multiple lines. Each line should be a new to-do.
-- Add some CSS styling to your app.
+[ok]- Have the input go back to empty after adding a new todo.
+[]- Implement a delete `button` next to each `li` that removes that `li` tag entirely.
+[]- Clicking a todo that is crossed out (completed) uncrosses the todo.
+[]- Add the ability to add multiple to-dos if the user submits a text input with multiple lines. Each line should be a new to-do.
+[]- Add some CSS styling to your app.
