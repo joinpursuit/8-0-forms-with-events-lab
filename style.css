@@ -1,3 +1,6 @@
 h1 {
 	font-weight: bold;
 }
+.striked {
+	text-decoration: line-through;
+}

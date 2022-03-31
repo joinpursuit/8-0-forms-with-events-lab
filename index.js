@@ -24,8 +24,9 @@ form.addEventListener('submit', (e) => {
 
         // Binding events to list itmes 
         // => Strike task
-        taskData.addEventListener("click", () => {
-            taskData.setAttribute(`style`, `text-decoration: line-through`)
+        task.addEventListener("click", () => {
+            task.setAttribute(`style`, `text-decoration: line-through`)
+            //task.classList.add('striked');
         });
         // => Delete task
         if(tasks.innerHTML!==""){
