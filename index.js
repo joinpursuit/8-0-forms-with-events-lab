@@ -2,15 +2,11 @@ const toDo = document.getElementById("toDo");
 const toDoList = document.getElementById("toDoList");
 const errorMessage = document.getElementById("errorMessage");
 const addItem = document.getElementById("addItem");
-addItem.style.height = "25px";
-addItem.style.backgroundColor = "black";
-addItem.style.color = "white";
 
 toDo.addEventListener("submit", (e) => {
   e.preventDefault();
 
   let { inputItem } = e.target;
-  const listItem = document.createElement("li");
 
   if (inputItem.value === "") {
     errorMessage.textContent = `ERROR: You're trying to submit an empty value!!!`;
@@ -18,27 +14,33 @@ toDo.addEventListener("submit", (e) => {
       errorMessage.textContent = "";
     }, 3000);
   } else {
-    const deleteItem = document.createElement("button");
-    deleteItem.textContent = "DELETE";
-    deleteItem.style.backgroundColor = "black";
-    deleteItem.style.color = "red";
-    deleteItem.style.marginLeft = "1%";
+    const tasks = inputItem.value.split("\n");
+    for (const task of tasks) {
+      addToList(task);
+    }
+    toDo.reset();
+  }
 
-    listItem.textContent = inputItem.value;
+  function addToList(addTask) {
+    const listItem = document.createElement("li");
+    const deleteItem = document.createElement("button");
+    deleteItem.classList.add("deleteItem");
+    deleteItem.textContent = "DELETE";
+
+    listItem.textContent = addTask;
     toDoList.append(listItem);
     listItem.append(deleteItem);
-    inputItem.value = "";
 
     listItem.addEventListener("click", (e) => {
       e.preventDefault();
 
-      listItem.style.textDecoration = "line-through";
+      listItem.classList.toggle("strike");
     });
 
     deleteItem.addEventListener("click", (e) => {
       e.preventDefault();
 
-      listItem.parentNode.removeChild(listItem);
+      listItem.remove();
     });
   }
 });

@@ -1,0 +1,15 @@
+#addItem {
+  height: 25px;
+  background-color: black;
+  color: white;
+}
+
+.deleteItem {
+  background-color: black;
+  color: red;
+  margin-left: 1%;
+}
+
+.strike {
+  text-decoration: line-through;
+}
