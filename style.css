@@ -86,24 +86,27 @@ form button:hover {
 }
 .striked {
 	text-decoration: line-through;
+	color: #fe4a49;
 }
 ul {
 	padding: 0;
 	list-style: none;
 }
 ul li {
-	padding: 10px 10px;
+	padding: 10px 10px 10px 32px;
 	margin: 5px 0;
-	background-color: #f4f4f8;
-}
-ul li span {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 1.4rem;
 	font-weight: 400;
-	color: #333;
+	color: #6bab90;
+	background-color: #f4f4f8;
+}
+ul li > i {
+	position: relative;
+	left: -76px;
 }
 ul li button {
-	padding: 5px 10px;
+	padding: 8px 10px;
 	margin: 0;
 	float: right;
 	background-color: #fed766;
@@ -113,7 +116,25 @@ ul li button {
 	color: #fff;
 	border: none;
 }
+ul li button i {
+	font-size: 1.2rem;
+}
 ul li button:hover {
 	background-color: #f0bc1f;
 	cursor: pointer;
+}
+footer {
+}
+footer section {
+	text-align: center;
+}
+footer section .fa-heart {
+	margin: 0 1px;
+	font-size: 2rem;
+	color: #fe4a49;
+}
+footer section .fa-js {
+	margin: 0 1px;
+	font-size: 2rem;
+	color: #1f8d9b;
 }
