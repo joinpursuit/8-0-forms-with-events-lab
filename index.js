@@ -42,19 +42,18 @@ function newTask(item){
           iconItem  = document.createElement("i");
     deleteBtn.innerHTML = '<i class="fa fa-solid fa-trash-can"></i>';
     
-    iconItem.classList.add('fa', 'fa-solid', 'fa-check')
+    iconItem.classList.add('fa', 'item', 'fa-solid', 'fa-check')
     taskItem.textContent = item;
     taskItem.appendChild(iconItem);
     taskItem.appendChild(deleteBtn);
     tasksList.append(taskItem)
     // => Binding list item event
     taskItem.addEventListener("click", () => {
-        if(!taskItem.hasAttribute('style')){
-            taskItem.setAttribute('style', 'text-decoration: line-through;color: #fe4a49;');
+        taskItem.classList.toggle('striked');
+        if(iconItem.classList.contains('fa-check')){
             iconItem.classList.remove('fa-check');
             iconItem.classList.add('fa-x')
         }else{
-            taskItem.setAttribute('style', 'text-decoration: none solid rgb(0, 0, 0);');
             iconItem.classList.remove('fa-x');
             iconItem.classList.add('fa-check');
         }
