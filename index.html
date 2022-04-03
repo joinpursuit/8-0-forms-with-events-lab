@@ -20,13 +20,17 @@
 
 <html>
     <head>
+      <!--must add defer src to run annotated code before the page  -->
       <script defer src="index.js"></script>
     </head>
     <body>
       <h1> To-Do's </h1> 
       <form> 
+        <!-- must have label tag with title -->
         <label>To-Do:</label>
+        <!-- input fields have a type - name - id -->
         <input type = 'text' name = 'todo' id = 'todo'/>
+        <!-- button is a type equal to "submit" with a title of Submit -->
         <button type = 'submit'> Submit </button>
       </form>  
       <ul></ul>   
