@@ -1,8 +1,9 @@
 
 const tasksInput = document.querySelector('textarea'),
-      tasksList  = document.querySelector('#tasks');
-      error      = document.querySelector('p');
+      tasksList  = document.querySelector('#tasks'),
+      error      = document.querySelector('p'),
       form       = document.querySelector('#new-task');
+//
 tasksInput.focus();
 // Adding new task to the list
 form.addEventListener('submit', (e) => {
