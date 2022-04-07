@@ -1,4 +1,4 @@
-console.log("Code your solution!")
+
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector("form");
     form.addEventListener("submit", (event) => {
@@ -18,3 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
       }
       input.value = "";
     });
+    const completed = document.querySelector("ul");
+    completed.addEventListener("click",(event)=>{
+        event.target.style.textDecoration = "line-through"
+    })
+  })
