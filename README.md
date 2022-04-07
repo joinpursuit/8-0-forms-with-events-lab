@@ -1,35 +1,3 @@
-# Forms with Events Lab
-
-Build one of the most common applications on the web, a simple todo application, with HTML, CSS, and JavaScript.
-
----
-
-## Lab Setup
-
-### Getting started
-
-1. Fork and clone this repository.
-
-1. Navigate to the cloned repository's directory on your command line. Then, run the following command:
-
-   ```
-   npm install
-   ```
-
-   This will install the libraries needed to run the tests.
-
-1. Open up the repository in VSCode. Follow the instructions below to complete the Lab.
-
-### Tests
-
-To run the tests, you can run the following command from the command line. You will need to be in the root directory of your local directory.
-
-```
-npm test
-```
-
-This will open the Cypress testing window, where you can click to run an individual suite of tests or all of the tests at once.
-
 ## Instructions
 
 Our app will have the following items:
