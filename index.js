@@ -8,4 +8,7 @@ form.addEventListener('submit', (e) => {
 
     const li = document.createElement("li");
     li.textContent = e.target.toDoList.value;
+
+    ul.append(li);
+    
 })
