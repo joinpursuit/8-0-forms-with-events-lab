@@ -2,22 +2,22 @@ console.log("Code your solution!");
 const form = document.querySelector("form");
 const h1 = document.querySelector("h1");
 const ul = document.querySelector("ul");
-
 form.addEventListener("submit", (e) => {
-  e.preventDefault(); //keeps page from submitted
-  console.log(e);
-  const li = document.createElement("li");
-  li.textContent = e.target.todo.value;
-  console.log(li);
-  //!append the created `li` to the list.
-  ul.append(li);
+    e.preventDefault(); //keeps page from submitted
+    console.log(e);
+    const li = document.createElement("li");
+    li.textContent = e.target.todo.value; //.todo refres to the name of the input
+    console.log(li); //
+    //!append the created `li` to the list.
+    ul.append(li);
+    
+    // //! create error
+    // const errMessage = document.getelementById(errorMsg)
+    //! When the user clicks on one of the `li` items, the item should be crossed out
+    li.addEventListener("click", (event) => {
+      console.log(event);
+      li.style.textDecoration = "line-through";
+    });
+   });
+   
 
-  // //! create error
-  // const errMessage = document.getelementById(errorMsg)
-  //! When the user clicks on one of the `li` items, the item should be crossed out
-  li.addEventListener("click", (event) => {
-    console.log(event);
-    li.style.textDecoration = "line-through";
-  });
-});
-//! bonuses
