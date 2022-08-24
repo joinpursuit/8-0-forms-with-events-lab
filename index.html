@@ -1,8 +1,24 @@
 <html>
     <head>
-      <script src="index.js"></script>
+      <script defer src="index.js"></script>
     </head>
     <body>
-      <h1> CODE YOUR SOLUTION </h1>      
+      <header>
+        <h1> My To-Dos</h1>  
+      </header>
+      <section>
+        <form id='new-list-form'>
+          <label for="item">To-Do Item <span class="required">*</span></label>
+          <input type="text" name="New To-Do Item" id="first-item" placeholder="First Item"> <br>
+          <label for="notes">Notes</label>
+          <textarea id="notes" type="notes"></textarea>
+        </form>
+      </section> 
+      <button type="submit">Submit</button>   
+
+    <section class="To-Do-List">
+      <h2>All To-Do Items</h2>
+      <ul></ul>
+    </section>
     </body>
 </html>
