@@ -10,5 +10,8 @@ form.addEventListener('submit', (e) => {
     li.textContent = e.target.toDoList.value;
 
     ul.append(li);
-    
-})
+
+    li.addEventListener("click", (e) => {
+        li.style.textDecoration = "line-through";
+    });
+});
