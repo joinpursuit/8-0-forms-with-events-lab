@@ -10,7 +10,7 @@ form.addEventListener("submit", (e) => {
     console.log(li); //
     //!append the created `li` to the list.
     ul.append(li);
-    
+    form.reset()
     // //! create error
     // const errMessage = document.getelementById(errorMsg)
     //! When the user clicks on one of the `li` items, the item should be crossed out
@@ -18,6 +18,16 @@ form.addEventListener("submit", (e) => {
       console.log(event);
       li.style.textDecoration = "line-through";
     });
+    //! bonus
+    const del = document.createElement("button")
+del.innerHTML = "Delete"
+del.type="submit"
+del.name="fromDel"
+del.style.margin = '10px'
+li.append(del)
+del.addEventListener("click", (e)=>{
+    li.remove()
+})
    });
    
 
