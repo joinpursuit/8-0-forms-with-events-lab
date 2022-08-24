@@ -53,7 +53,13 @@ form.addEventListener(`submit`, e => {
         listItem.textContent = typed
         ul.append(listItem)
     }
+    else{
+        alert(`Please enter text into field.`)
+    }
     form.reset()
+    listItem.addEventListener(`click`, e => {
+        e.target.style.textDecoration =`line-through`
+    })
 })
 
 
