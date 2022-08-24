@@ -11,7 +11,7 @@ form.addEventListener('submit', (e) => {
 
     ul.append(li);
 
-    li.addEventListener("click", (e) => {
+    li.addEventListener("click", () => {
         li.style.textDecoration = "line-through";
     });
 });
