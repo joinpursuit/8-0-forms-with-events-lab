@@ -1,29 +1,21 @@
 // console.log("Code your solution!")
 
-const form = document.querySelector('#new-list-form')
+const form = document.querySelector('form')
+const ul = document.querySelector('ul')
+// const input = document.querySelector('input')
+// const button = document.querySelector('button')
 
-form.addEventListener('submit',(event) => {
-  event.preventDefault()
-  const name = event.target.item.value
-  generateContact()
-})
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  // console.log(event)
+  const li = document.createElement('li');
 
-function contactTemplate (item, notes) {
-    const li = document.createElement("li");
-    li.textContent += item;
+  li.textContent = event.target.list.value;
+  ul.append(li);
 
-      if (notes) {
-      li.append(document.createElement("br"), notes);
-    }
+  li.addEventListener('click', () => {
+    li.style.textDecoration = 'line-through';
+  });
+  form.reset();
+});
 
-    return li;
-  }
-
-function generateContact (item, notes) {
-    const li = contactTemplate(item, notes);
-  
-    const ul = document.querySelector("ul");
-    ul.append(li);
-  
-    UpdateContactCount()
-  }
