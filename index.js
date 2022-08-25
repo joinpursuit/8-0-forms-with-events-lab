@@ -20,14 +20,33 @@ formInput.setAttribute(`id`, `todo-entry`);
 formInput.setAttribute(`type`, `text`);
 form.append(formInput);
 
-const submit = document.createElement(`input`);
-submit.setAttribute(`type`, `submit`);
+const submit = document.createElement(`button`);
+submit.textContent = `SUBMIT`;
+submit.setAttribute(`type`, `submit`)
 form.append(submit);
 
+const errorMessage = document.createElement(`p`);
+
 form.addEventListener(`submit`, (event) => {
-    event.preventDefault()
-    const li = document.createElement(`li`)
-    li.textContent = formInput.value
-    ul.append(li)
-    form.reset()
+  event.preventDefault();
+  if (errorMessage.textContent.length > 0) {
+    errorMessage.textContent = ``
+  }
+  if (formInput.value === ``) {
+    errorMessage.textContent = `Error: please enter a valid element`;
+    errorMessage.classList.add(`error-message`)
+    form.after(errorMessage);
+  } else {
+    const li = document.createElement(`li`);
+    li.setAttribute(`class`, `list-item`)
+    li.textContent = formInput.value;
+    ul.append(li);
+    form.reset();
+  }
 });
+
+ul.addEventListener(`click`, (element) => {
+    if(element.target.classList.contains(`list-item`)){
+        element.target.style.textDecoration = `line-through`
+    }
+})
