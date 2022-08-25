@@ -13,12 +13,10 @@ form.addEventListener("submit", (e) => {
     form.after(p);
   } else {
     const inputTodos = input.value.trim().split("\n");
-    console.log(inputTodos);
     for (let todo of inputTodos) {
       createTodoAndAppend(todo);
     }
-
-    input.value = "";
+    form.reset();
   }
 });
 

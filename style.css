@@ -1,6 +1,53 @@
+body{
+    background-color: bisque;
+}
+h1{
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
 button {
     margin-left: 10px;
 }
 li {
     font-size: 1.2rem;
+}
+.container {
+   
+    background-color:rgba(105, 105, 105, 0.156);
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 300px;
+
+}
+form {
+    text-align: center;
+}
+
+form button {
+    margin-top: 20px;
+    padding:8px 20px;
+}
+textarea {
+    width: 300px;
+    height: 80px;
+    padding: 12px 20px;
+    border: 2px solid #ccc;
+    outline: none;
+    resize: none;
+    background-color:antiquewhite;
+}
+span {
+    display: inline-grid;
+    width: 10%;
+    margin-right: 30px;
+}
+li {
+    font-size: larger;
+    margin-bottom: 10px;
+    text-align: center;
+}
+ul {
+    list-style-type: none;
 }
