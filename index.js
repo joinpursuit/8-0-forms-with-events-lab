@@ -1,10 +1,18 @@
 // console.log("Code your solution!")
 
 document.body.style.textAlign = `center`
+document.body.style.backgroundImage = `url('to-do-list-190702-800x450-e1597247898638.jpeg')`
+document.body.style.backgroundRepeat = `no-repeat`
+document.body.style.backgroundPosition =`center`
+document.body.style.backgroundColor = `rgb(32,42,68)`
+document.body.style.color = `white`
+
 
 
 const h1 = document.querySelector(`h1`)
-h1.textContent = `My To-Do's`
+h1.textContent = `Destiny's To-Do List`
+h1.style.fontFamily = `chalkboard`
+// h1.style.color = `white`
 const ul = document.createElement(`ul`)
 h1.after(ul)
 
@@ -79,6 +87,8 @@ form.addEventListener(`submit`, e => {
         // alert(`Please enter text into field.`)
         const error = document.createElement(`p`)
         error.textContent =`If you had nothing to do, you wouldn't be here. Please enter text into field`
+        error.style.color =`red`
+        error.style.fontSize = `18px`
         formDiv.after(error)
          }
     
