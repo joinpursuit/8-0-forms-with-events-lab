@@ -1,4 +1,4 @@
-console.log("Code your solution!")
+// console.log("Code your solution!")
 
 document.body.style.textAlign = `center`
 
@@ -46,21 +46,64 @@ inputBox.setAttribute(`id`, `chores`)
 
 form.addEventListener(`submit`, e => {
     e.preventDefault()
+
+    // set variable to represent inputted text in form
     const typed = e.target.input.value
     // console.log(typed)
+    
+    // create variable for li element
     const listItem = document.createElement(`li`)
+
+    // create variable for delete button
+    const deleteButton = document.createElement(`button`)
+    deleteButton.setAttribute(`type`, `button`)
+    deleteButton.setAttribute(`style`, `width:auto; height:auto`)
+    deleteButton.textContent = `Delete item`
+    
     if (typed){
+        //add contents of inputted textbox to list on page then append to ul
         listItem.textContent = typed
+        listItem.setAttribute(`class`, `${typed}`)
+        deleteButton.setAttribute(`class`, `${typed}`)
+        listItem.append(deleteButton)
         ul.append(listItem)
+        
+        // if a previous error was shown (p), this removes it once a valid entry is submitted
+        if(document.querySelectorAll(`p`).length){
+            document.querySelectorAll(`p`).forEach(x =>
+                x.remove())
+        }
     }
     else{
-        alert(`Please enter text into field.`)
-    }
-    form.reset()
+        // create error if no text content exist in inputted box
+        // alert(`Please enter text into field.`)
+        const error = document.createElement(`p`)
+        error.textContent =`If you had nothing to do, you wouldn't be here. Please enter text into field`
+        formDiv.after(error)
+         }
+    
+         form.reset()
+  
+         //  add event listener to `li` -> list items to have line through if clicked     
     listItem.addEventListener(`click`, e => {
-        e.target.style.textDecoration =`line-through`
-    })
-})
+        if(e.target.style.textDecoration === `line-through`){
+            e.target.style.textDecoration =`none`
+        }
+        else{
+            e.target.style.textDecoration =`line-through`
+        }
+        
 
+        
+    })
+
+        // Add event listener to delete buttons to delete corresponding list item when clicked
+    deleteButton.addEventListener(`click`, e => {
+        const className = e.target.className
+        const remove = document.getElementsByClassName(`${className}`)
+        // console.log(remove) -> HTML collection not NodeList can't loop
+        remove[0].remove()
+       })
+})
 
 
