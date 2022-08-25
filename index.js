@@ -18,18 +18,18 @@ form.addEventListener("submit", (e) => {
   li.textContent = e.target.todo.value;
   ul.append(li);
 
-  li.after(deleteD);
-  deleteD.setAttribute("class", `${e.target.todo.value}`);
-  li.setAttribute("class", `${e.target.todo.value}`);
+  //   li.after(deleteD);
+  //   deleteD.setAttribute("class", `${e.target.todo.value}`);
+  //   li.setAttribute("class", `${e.target.todo.value}`);
 
-  deleteD.addEventListener("click", (e) => {
-    const buttonDelete = document.getElementsByClassName(
-      `${e.target.todo.value}`
-    );
-    buttonDelete.forEach((element) => {
-      element.remove;
-    });
-  });
+  //   deleteD.addEventListener("click", (e) => {
+  //     const buttonDelete = document.getElementsByClassName(
+  //       `${e.target.todo.value}`
+  //     );
+  //     buttonDelete.forEach((element) => {
+  //       element.remove;
+  //     });
+  //   });
 
   li.addEventListener("click", (e) => {
     li.style.textDecoration = "line-through";
