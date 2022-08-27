@@ -17,7 +17,7 @@ li.style.textDecoration = "line-through"
 })
 
 
-// document.getElementById('#todo').value=''
+ document.getElementById('todo').value=''
 
 
 
