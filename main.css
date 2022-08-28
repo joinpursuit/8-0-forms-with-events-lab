@@ -1,0 +1,8 @@
+li button {
+    margin-left: 5px;
+}
+
+label > button {
+    display: flex;
+    margin-top: 2px;
+}
