@@ -1,0 +1,56 @@
+body {
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: top;
+    background-image:url(https://cdn.wallpapersafari.com/66/84/otpbm5.png);
+    width: 100%;
+    height: 100%;
+    font-family: Arial, Helvetica;
+    letter-spacing: 0.02em;
+     font-weight: 400;
+    -webkit-font-smoothing: antialiased; 
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    color: black;
+    padding-top: 15px;
+}
+
+label {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: bolder;
+}
+
+textarea {
+    margin-bottom: 20px;
+    position: relative;
+    left: 20px;
+    top: 15px;
+}
+
+#submit-id{
+    position: relative;
+    left: 20px;
+}
+
+p {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: bolder;
+    position: relative;
+    left: 180px;
+}
+
+.list-elem {
+    margin-bottom: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: larger;
+    font-weight: bolder;
+    position: relative;
+    left: 150px;
+}
