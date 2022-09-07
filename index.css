@@ -1,0 +1,37 @@
+#button {
+width: 40px;
+height: 25px;
+border: 2px solid #444;
+vertical-align: middle;
+};
+
+#to-dos {
+margin-top: 25px;
+};
+
+#to-do {
+width: 300px;
+height: 50px;
+border: 1.3px solid black;
+outline: none;
+font-size: 25px;
+};
+
+.body {
+    vertical-align: middle;
+    position: absolute;
+    border: 50px;
+    background-color: #444;
+}
+
+#ul {
+    margin-top: 10px;
+}
+
+html, body {
+    width:50%;
+    margin: 0 auto;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
