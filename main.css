@@ -1,0 +1,13 @@
+li {
+    text-decoration: none solid rgb(0, 0, 0);
+}
+
+/* @media {
+    li {
+        text-decoration: line-through solid rgb(0, 0, 0);
+    }
+} */
+
+/* li .input.value .click {
+    text-decoration: line-through solid rgb(0, 0, 0);
+} */
