@@ -1,0 +1,33 @@
+html, body {
+    font-family: 'EB Garamond', serif;
+    background: #2f4667;
+  }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    color: rgb(180, 96, 180)
+  }
+
+form button[type="submit"] {
+    background: #a55cb1;
+    border: none;
+    border-radius: 5px;
+    color: #f7f7f7;
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 10px;
+  }
+
+.forms ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+  }
+  
+
+.forms ul li {
+    border-bottom: 1px solid #73956F;
+    display: block;
+    padding: 25px 0;
+    color:#d29fda
+  }
