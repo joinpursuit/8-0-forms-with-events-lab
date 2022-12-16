@@ -5,19 +5,20 @@ const form = document.querySelector("form");
 const p = document.querySelector("p");
 
 form.addEventListener("submit", (event) => {
-    event.preventDefault(); // stop submit from reseting page
+    event.preventDefault(); 
 
-    p.innerText = ""; // resest p to be empty after submiting
+    p.innerText = ""; 
 
-    const li = document.createElement("li"); // create li
-    li.textContent = event.target.text.value; // 
+    const li = document.createElement("li"); 
+    li.textContent = event.target.text.value;  
     ul.append(li);
 
-    const deleteBtn = document.createElement("button"); // creates button 
-    li.append(deleteBtn); // places button in li
-    deleteBtn.innerText = "delete"; // gives button visual text
 
-    if (!text.value) { // checks if 
+    const deleteBtn = document.createElement("button"); 
+    li.append(deleteBtn); 
+    deleteBtn.innerText = "delete"; 
+
+    if (!text.value) { 
         p.innerText = "Error To Do Can Not Be Empty!";
         li.remove();
     }
