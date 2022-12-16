@@ -4,14 +4,20 @@ const formElement = document.querySelector("form");
 // add an 'eventListener' for the 'submit' event
 formElement.addEventListener("submit", (event) => {
 
+    // demo is not for code review /
+
     // prevent the default 'action' of the 'form' element
     event.preventDefault();
-
+    console.log(event)
     // create an 'li' element 
     let listElement = document.createElement("li");
 
     // get the 'value' of the element with 'textInput' id and assign it to a variable
-    const textInputValue = document.querySelector("#textInput").value;
+    // Method #1
+    //const textInputValue = document.querySelector("#textInput").value;
+
+    // Method #2 - is that input supposed to be in the event.
+    const textInputValue2 = event.target.textInput.value;
 
     // assign the 'text-content' of the list element to that of the 'value' from the 'text-input'
     listElement.textContent = textInputValue;
@@ -33,4 +39,7 @@ formElement.addEventListener("submit", (event) => {
     // append the modified 'li' element to the 'ul' element
     unorderedListElement.append(listElement);
 
+    event.target.textInput.value = '';
+
 });
+
