@@ -8,10 +8,13 @@
 
       <form>
         <label>
-          <input id="todo" name="todo" type="text" placeholder="Type a todo" />
+          <!-- <input id="todo" name="todo" type="text" placeholder="Type a todo" /> -->
+          <textarea id="todo" name="todo" cols="30" rows="2" placeholder="Type a todo" ></textarea>
+          <br>
           <button type="submit">Submit</button> 
         </label>
       </form>
+      <p style="display: none;">Error. Todo cannot be empty</p>
       <ul></ul>
     </body>
 </html>
