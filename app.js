@@ -50,7 +50,7 @@ function deleteTodoOrCross(event){
         event.target.parentNode.remove()
     }
 
-    if(classList.contains('todo')){
+    if(classList.contains('todo') || classList.contains("todo-item")){
         classList.toggle("completed")
     }
 console.log(classList)
