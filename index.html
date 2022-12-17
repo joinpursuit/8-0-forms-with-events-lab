@@ -1,8 +1,16 @@
 <html>
     <head>
-      <script src="index.js"></script>
+      <script defer src="index.js"></script>
+      <title>Forms-with-events</title>
     </head>
     <body>
-      <h1> CODE YOUR SOLUTION </h1>      
+      <h1>My To-Dos</h1> 
+      <hr>     
+      <form id="todoForm">
+        <input type="text" name="todoText" id="todoText" placeholder="Type a todo">
+        <button type="submit">Submit</button>
+      </form>
+      <p class="error"></p>
+      <ul class="todoList"></ul>
     </body>
 </html>
