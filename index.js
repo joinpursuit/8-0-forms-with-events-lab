@@ -1,45 +1,39 @@
-// grab the 'form' element from the DOM and store it inside a variable
 const formElement = document.querySelector("form");
 
-// add an 'eventListener' for the 'submit' event
-formElement.addEventListener("submit", (event) => {
-
-    // demo is not for code review /
-
-    // prevent the default 'action' of the 'form' element
+formElement.addEventListener("submit", event => {
     event.preventDefault();
-    console.log(event)
-    // create an 'li' element 
-    let listElement = document.createElement("li");
 
-    // get the 'value' of the element with 'textInput' id and assign it to a variable
-    // Method #1
-    //const textInputValue = document.querySelector("#textInput").value;
+    if( event.target.textInput.value === "" ){
 
-    // Method #2 - is that input supposed to be in the event.
-    const textInputValue2 = event.target.textInput.value;
+        document.querySelector("p").textContent = "Please provide a valid To-Do.";
 
-    // assign the 'text-content' of the list element to that of the 'value' from the 'text-input'
-    listElement.textContent = textInputValue;
+    }else{
 
-    // add an eventListener of type 'click' when the 'list' element is clicked by the user.
-    listElement.addEventListener("click", (event) => {
+        document.querySelector("p").textContent = "";
 
-        // prevent the 'default' action for the 'li' element
-        event.preventDefault();
+        const deleteBtn = document.createElement("button");
+        deleteBtn.classList.add("delBtn");
+        deleteBtn.textContent = "Delete";
 
-        // add 'text-decoration' to the 'clicked' list element
-        listElement.style.textDecoration = "line-through";
+        deleteBtn.addEventListener("click", handleClick => {
+            handleClick.target.parentNode.remove()
+        });
+    
+        const listElement = document.createElement("li");
+        listElement.classList.add("toDos");
+        listElement.textContent = `${event.target.textInput.value}\n`;
 
-    });
+        listElement.addEventListener("click", handleClick => {
+            let liTextDeco = handleClick.target;   
+            liTextDeco.style.textDecorationLine = liTextDeco.style.textDecorationLine === "" ? "line-through" : "";
+        });
 
-    // access the 'ul' element with a querySelector and store it inside a variable
-    const unorderedListElement = document.querySelector("ul");
+        listElement.append(deleteBtn);
 
-    // append the modified 'li' element to the 'ul' element
-    unorderedListElement.append(listElement);
+        const unOrderedListElement = document.querySelector("ul");
+        unOrderedListElement.append(listElement);
 
-    event.target.textInput.value = '';
+        event.target.textInput.value = "";
 
+    }
 });
-
