@@ -1,0 +1,45 @@
+h1 {
+    text-align: center;
+}
+
+form {
+    text-align: center;
+}
+
+button {
+    border-radius: 10px;
+    background: lightgreen;
+    box-shadow: 2px 2px 2px green;
+}
+
+input#todoText {
+    border-radius: 10px;
+}
+
+p.error {
+    text-align: center;
+    font-weight: bold;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 24px;
+    list-style: none;
+    right: 50px;
+    width: 22vw;
+}
+
+.deleteButton {
+    position: absolute;
+    left: 34vw;
+    width: 42px;
+    height: 20px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
