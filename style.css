@@ -36,6 +36,7 @@ li {
     left: 34vw;
     width: 42px;
     height: 20px;
+    text-decoration: none !important;
 }
 
 ul {
@@ -43,3 +44,4 @@ ul {
     align-items: center;
     flex-direction: column;
 }
+

@@ -1,6 +1,7 @@
 const form = document.querySelector('form');
 const ul = document.querySelector('.todoList');
 const errorMessageField = document.querySelector('p.error');
+let li;
 
 // Create a variable that will contain all of the 'li' elements 
 let todoListElements = [];
@@ -17,10 +18,10 @@ function updateTodoList(event) {
     event.preventDefault();
     
     // Create 'li' element 
-    const li = document.createElement('li');
+    li = document.createElement('li');
     // Create a delete button that will go next to each li element
     const todoDeleteButton = document.createElement('button');
-    const hr = document.createElement('hr');
+  
 
 
     // Update the text for the 'li' element to be the same as the user todo submission text
@@ -38,11 +39,11 @@ function updateTodoList(event) {
             todoDeleteButton.classList.add('deleteButton');
             todoDeleteButton.textContent = 'DEL';
             todoLi.append(todoDeleteButton);  
+            todoDeleteButton.addEventListener('click', removeLiElement);
+            form.reset();
         });
         li.after(hr);
-        
     }
-
     
     // Reset the input field  and/or the errorMessageField after the user submits
     form.reset();
@@ -69,6 +70,12 @@ function strikeThrough(event) {
    } else {
     event.target.style.textDecoration = 'none';
    }
+}
+
+// Write a function 'removeLiElement' that removes the li element when the delete button is pressed
+function removeLiElement() {
+    li = document.querySelector('li');
+    li.remove();
 }
 
 
