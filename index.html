@@ -1,8 +1,17 @@
 <html>
     <head>
-      <script src="index.js"></script>
+      <script defer src="index.js"></script>
     </head>
-    <body>
-      <h1> CODE YOUR SOLUTION </h1>      
+    <body> 
+      <div id="toDoHeader" class="header">
+      <h1> To-Do List </h1>
+      </div>
+      <form>
+        <!--text box and button for to-do list.-->
+        <input type='text' name="task" id="task" placeholder="Enter a task" required> 
+        <button type="submit" id="addBtn" name="todo">Submit</button>
+        <ul></ul>  
+      </form>
+      <br>
     </body>
 </html>
