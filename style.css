@@ -33,7 +33,7 @@ li {
 
 .deleteButton {
     position: absolute;
-    left: 34vw;
+    left: 160px;
     width: 42px;
     height: 20px;
     text-decoration: none !important;
@@ -43,5 +43,10 @@ ul {
     display: flex;
     align-items: center;
     flex-direction: column;
+}
+
+.todoLine {
+    border: 1px solid black;
+    width: 100%;
 }
 

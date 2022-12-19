@@ -2,6 +2,7 @@ const form = document.querySelector('form');
 const ul = document.querySelector('.todoList');
 const errorMessageField = document.querySelector('p.error');
 let li;
+let hr;
 
 // Create a variable that will contain all of the 'li' elements 
 let todoListElements = [];
@@ -21,6 +22,8 @@ function updateTodoList(event) {
     li = document.createElement('li');
     // Create a delete button that will go next to each li element
     const todoDeleteButton = document.createElement('button');
+    hr = document.createElement('hr');
+    hr.classList.add('todoLine');
   
 
 
@@ -32,6 +35,7 @@ function updateTodoList(event) {
         printError();
     } else {
         ul.append(li);
+        li.after(hr);
         todoListElements = document.querySelectorAll('li');
         // Loop through each 'li' element and add an event listener for each element
         todoListElements.forEach(todoLi => {
@@ -42,7 +46,7 @@ function updateTodoList(event) {
             todoDeleteButton.addEventListener('click', removeLiElement);
             form.reset();
         });
-        li.after(hr);
+        
     }
     
     // Reset the input field  and/or the errorMessageField after the user submits
@@ -72,10 +76,10 @@ function strikeThrough(event) {
    }
 }
 
-// Write a function 'removeLiElement' that removes the li element when the delete button is pressed
+// Write a function 'removeLiElement' that removes the li element and '.todoLine' element when the delete button is pressed
 function removeLiElement() {
-    li = document.querySelector('li');
-    li.remove();
+    this.parentNode.nextSibling.remove();
+    this.parentNode.remove();
 }
 
 
