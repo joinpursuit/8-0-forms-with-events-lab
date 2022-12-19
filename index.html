@@ -1,7 +1,7 @@
 <html>
     <head>
       <script defer src="index.js"></script>
-      <title>Forms with Events Lab - 9.3 </title>
+      <title>Forms with Events Lab</title>
       <style>
         h1 {
           padding: 10px;
@@ -11,19 +11,22 @@
           color:yellow;
           justify-content: center;
         }
+
         body{
           background-color: darkseagreen;
         }
-        button, #text{
+        
+        button, #text, p, ul{
           padding: 10px;
           margin:10px;
           font-size: larger;
           font-weight: bold;
         }
+        
         form{
           text-align: center;
         }
-
+        
       </style>
     </head>
     <body>
@@ -31,8 +34,8 @@
       <form action="">
         <input type="text" name = "text" id = "text" placeholder="Type a todo">
         <button type = "submit" name = "submit" value = "submit">Submit</button>
+        <p></p>
       </form>
-      <p class = "error"></p>
-      <ul class="todoList"></ul>
+      <ul></ul>
     </body>
 </html>
