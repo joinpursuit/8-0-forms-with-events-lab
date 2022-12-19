@@ -1,9 +1,15 @@
+body {
+    margin: 0;
+}
+
 h1 {
     text-align: center;
 }
 
 form {
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 button {
@@ -22,27 +28,28 @@ p.error {
 }
 
 li {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
     font-size: 24px;
     list-style: none;
-    right: 50px;
     width: 22vw;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .deleteButton {
-    position: absolute;
-    left: 160px;
+    position: relative;
     width: 42px;
     height: 20px;
     text-decoration: none !important;
+    margin-right: 15px;
 }
 
 ul {
     display: flex;
     align-items: center;
     flex-direction: column;
+    padding: 0px;
 }
 
 .todoLine {

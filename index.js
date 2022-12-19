@@ -13,11 +13,12 @@ form.addEventListener('submit', updateTodoList);
 
 // Create an event listener to reset the errorMessageField when the user clicks inside of the input field
 form.todoText.addEventListener('input', removeErrorText);
+form.todoText.addEventListener('click', removeErrorText);
 
 // Write a function that will create an 'li' element for each user todo submission
 function updateTodoList(event) {
     event.preventDefault();
-    
+
     // Create 'li' element 
     li = document.createElement('li');
     // Create a delete button that will go next to each li element
@@ -25,8 +26,6 @@ function updateTodoList(event) {
     hr = document.createElement('hr');
     hr.classList.add('todoLine');
   
-
-
     // Update the text for the 'li' element to be the same as the user todo submission text
     li.innerText = event.target.todoText.value;
 
@@ -80,6 +79,7 @@ function strikeThrough(event) {
 function removeLiElement() {
     this.parentNode.nextSibling.remove();
     this.parentNode.remove();
+    removeErrorText();
 }
 
 
