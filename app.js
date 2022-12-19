@@ -1,9 +1,10 @@
 /* <-------------- Selectors ------------> */
+const svgCheck = document.querySelector("svg #vector-check")
+const svgOutline = document.querySelector("svg #vector-outline")
+const form = document.querySelector("form");
 const inputField = document.querySelector("input[type='text']")
 const submitBTN = document.querySelector("button")
 const todoList = document.querySelector(".todo-list")
-
-const form = document.querySelector("form");
 
 /* <-------------- Event Listeners ------------> */
 submitBTN.addEventListener("click", addNewToDo);
@@ -53,7 +54,28 @@ function deleteTodoOrCross(event){
     if(classList.contains('todo')){
         classList.toggle("completed")
     }
-console.log(classList)
+
+    addAnimation()
 
 }
 
+function addAnimation() {
+    let status = true;
+
+    for(let todo of todoList.children){
+        if(!todo.classList.contains("completed")|| todo.classList == 0){
+            status = false
+        }
+
+    }
+    
+    if(status == true){
+        svgCheck.classList.toggle("animate");
+        svgOutline.classList.toggle("animate");
+        setTimeout(()=> {
+            svgCheck.classList.toggle("animate")
+            svgOutline.classList.toggle("animate")
+        }, 2500)
+    }
+    
+}
