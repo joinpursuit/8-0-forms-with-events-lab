@@ -4,41 +4,48 @@ const ul = document.querySelector("ul")
 
 const addToDO = ((text) => {
     if (text) {
-        const li = document.createElement("li");
-
+        const li = document.createElement("li")
+        
+        li.addEventListener("click" ,(event)=> {
+            li.style.textDecoration = "line-through"
+         
+            // event.target.form.li.todo = textdecorationline;
+            console.log(event.target)
+            console.log(text)
+        }) 
         ul.append(li);
         li.append(text)
         
-    }
+        }
 }) 
 
-
+const pTag = document.querySelector("p.paragraph")
 const form = document.querySelector("form")
 const li = document.querySelector("li")
-const textContent = document.querySelector("#textContent")
-form.addEventListener("click", (event)=> {
-event.preventDefault()
-const text = event.target.form.textContent.value;
 
-addToDO(text)
-form.reset()
+const submit = document.querySelector("button")
+
+// ** A more condensed one liner way to write the .addEventListener 
+// Instead of splitting the doucmnet.querySelector("button") line from the form.addEventlistener line of code.**
+//  document.querySelector("button").form.addEventListener("submit", (event)=> {
+//     event.preventDefault()
+//  const thisInput =  document.querySelector("input") - ** Create a variable to store the value of our HTML input element**
+//const text = thisInput.value - ** A variable to store the string values of this input that is typed into the input box.
+
+
+form.addEventListener("submit", (event) => {
+    event.preventDefault()
+
+  const thisInput =  document.querySelector("input")
+  const text = thisInput.value
+//   console.log(text)
+//   console.log(thisInput.value)
+if (form.todo.value === "") {
+    pTag.innerText = "Error No Input"
+}
+// }
+    addToDO(text)
+    form.reset()
 })
 
 
-//Wrote the below fucntion for event the line-through. However at thie state it is currently written it doesn
-
-// const crossout = ((text) => {
-//      li = document.querySelector("li")
-    
-// })
-
-// form.addEventListener("click" ,(event)=> {
-//     event.target.form.li.textContent = text-decoration.line-through;
-// } )
-
-// Struggling to find a solution for the event line through text decoration after the li is clicked. 
-//Attempted to write it under style in HTML and did not work. 
-//Created a CSS file in an effort to link it to the HTML. 
-//Another issue I had was getting the proper syntax for the code for the evemt to take place. 
-//Example is it 
-//(event.target.form.text-decoration.value = event.target.line-through.value) are we able to include the hyphens in the property name(text-decoration)and the value (line-through)?
