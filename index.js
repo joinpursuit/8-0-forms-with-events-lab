@@ -8,7 +8,7 @@ let hr;
 let todoListElements = [];
 
 
-// Create an event listener for when the user inputs text and submits
+// Create an event listener for when the user inputs text and dg
 form.addEventListener('submit', updateTodoList);
 
 // Create an event listener to reset the errorMessageField when the user clicks inside of the input field
