@@ -16,3 +16,9 @@ form.addEventListener("submit", (event) =>{
     }
     event.target.reset();
 })
+
+const ul = document.querySelector("ul");
+ul.addEventListener("click", (event) =>{
+    event.preventDefault();
+    event.target.style["text-decoration"] = "line-through";
+})
