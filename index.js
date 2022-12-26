@@ -1,39 +1,67 @@
 const formElement = document.querySelector("form");
 
 formElement.addEventListener("submit", event => {
-    event.preventDefault();
-
-    if( event.target.textInput.value === "" ){
-
-        document.querySelector("p").textContent = "Please provide a valid To-Do.";
-
-    }else{
-
-        document.querySelector("p").textContent = "";
-
-        const deleteBtn = document.createElement("button");
-        deleteBtn.classList.add("delBtn");
-        deleteBtn.textContent = "Delete";
-
-        deleteBtn.addEventListener("click", handleClick => {
-            handleClick.target.parentNode.remove()
-        });
-    
-        const listElement = document.createElement("li");
-        listElement.classList.add("toDos");
-        listElement.textContent = `${event.target.textInput.value}\n`;
-
-        listElement.addEventListener("click", handleClick => {
-            let liTextDeco = handleClick.target;   
-            liTextDeco.style.textDecorationLine = liTextDeco.style.textDecorationLine === "" ? "line-through" : "";
-        });
-
-        listElement.append(deleteBtn);
-
-        const unOrderedListElement = document.querySelector("ul");
-        unOrderedListElement.append(listElement);
-
-        event.target.textInput.value = "";
-
-    }
+  executeOnSubmit(event);
 });
+
+function executeOnSubmit(event){
+
+  // prevent default action
+  event.preventDefault();
+
+  // extract user_input
+  const userInput = event.target.text_input.value;
+
+  // respond depending on user_input
+  displayResponse(userInput);
+
+  // clear contents of form
+  event.target.text_input.value = "";
+
+};
+
+function displayResponse(input){
+
+  if(!input){
+    document.querySelector("p").textContent = "Please provide a valid To-Do.";
+  }else{
+
+    document.querySelector("p").textContent = "";
+
+    const deleteBtn  = createDeleteButton();
+
+    const toDo = createToDoListElement(input);
+
+    toDo.append(deleteBtn);
+
+    const unOrderedListElement = document.querySelector("ul");
+    unOrderedListElement.append(toDo);
+  }
+
+};
+
+function createDeleteButton(){
+
+  const deleteBtn = document.createElement("button");
+  deleteBtn.classList.add("delBtn");
+  deleteBtn.textContent = "Delete";
+
+  deleteBtn.addEventListener("click", clickEvent => {
+      clickEvent.target.parentNode.remove();
+  });
+
+  return deleteBtn;
+};
+
+function createToDoListElement(input){
+
+  const listElement = document.createElement("li");
+  listElement.classList.add("toDos");
+  listElement.textContent = `${input}`;
+
+  listElement.addEventListener("click", clickEvent => { 
+      clickEvent.target.classList.toggle("line-through");
+  });
+ 
+  return listElement;
+};
