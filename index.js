@@ -1,11 +1,10 @@
 const formElement = document.querySelector("form");
 
-formElement.addEventListener("submit", event => {
+formElement.addEventListener("submit", (event) => {
   executeOnSubmit(event);
 });
 
-function executeOnSubmit(event){
-
+function executeOnSubmit(event) {
   // prevent default action
   event.preventDefault();
 
@@ -17,51 +16,44 @@ function executeOnSubmit(event){
 
   // clear contents of form
   event.target.text_input.value = "";
+}
 
-};
-
-function displayResponse(input){
-
-  if(!input){
-    document.querySelector("p").textContent = "Please provide a valid To-Do.";
-  }else{
-
-    document.querySelector("p").textContent = "";
-
-    const deleteBtn  = createDeleteButton();
-
-    const toDo = createToDoListElement(input);
-
-    toDo.append(deleteBtn);
-
-    const unOrderedListElement = document.querySelector("ul");
-    unOrderedListElement.append(toDo);
+function displayResponse(input) {
+  if (!input) {
+    return (document.querySelector("p").textContent = "Please provide a valid To-Do.");
   }
 
-};
+  document.querySelector("p").textContent = "";
 
-function createDeleteButton(){
+  const deleteBtn = createDeleteButton();
+  const toDo = createToDoListElement(input);
 
+  toDo.append(deleteBtn);
+
+  const unOrderedListElement = document.querySelector("ul");
+  unOrderedListElement.append(toDo);
+}
+
+function createDeleteButton() {
   const deleteBtn = document.createElement("button");
   deleteBtn.classList.add("delBtn");
   deleteBtn.textContent = "Delete";
 
-  deleteBtn.addEventListener("click", clickEvent => {
-      clickEvent.target.parentNode.remove();
+  deleteBtn.addEventListener("click", (clickEvent) => {
+    clickEvent.target.parentNode.remove();
   });
 
   return deleteBtn;
-};
+}
 
-function createToDoListElement(input){
-
+function createToDoListElement(input) {
   const listElement = document.createElement("li");
   listElement.classList.add("toDos");
   listElement.textContent = `${input}`;
 
-  listElement.addEventListener("click", clickEvent => { 
-      clickEvent.target.classList.toggle("line-through");
+  listElement.addEventListener("click", (clickEvent) => {
+    clickEvent.target.classList.toggle("line-through");
   });
- 
+
   return listElement;
-};
+}
