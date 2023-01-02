@@ -1,14 +1,14 @@
 describe("Todo App - Bonus", () => {
   it("clears the input when a todo is added", () => {
-    cy.get("textarea").clear().type("Wash dishes");
+    cy.get("input, textarea").clear().type("Wash dishes");
     cy.get("button[type=submit]").click();
-    cy.get("textarea").should("have.value", "");
+    cy.get("input, textarea").should("have.value", "");
   });
 
   it("deletes only one item when its delete button is pressed", () => {
-    cy.get("textarea").clear().type("Wash dishes");
+    cy.get("input, textarea").clear().type("Wash dishes");
     cy.get("button[type=submit]").click();
-    cy.get("textarea").clear().type("Be awesome");
+    cy.get("input, textarea").clear().type("Be awesome");
     cy.get("button[type=submit]").click();
     cy.get("li button").first().click();
     cy.get("li").should(($li) => {
@@ -18,7 +18,7 @@ describe("Todo App - Bonus", () => {
   });
 
   it("no longer strikes through an li when clicked a second time", () => {
-    cy.get("textarea").clear().type("Wash dishes");
+    cy.get("input, textarea").clear().type("Wash dishes");
     cy.get("button[type=submit]").click();
     cy.get("li")
       .first()
@@ -28,7 +28,7 @@ describe("Todo App - Bonus", () => {
   });
 
   it("adds multiple to-dos when the text input has multiple lines", () => {
-    cy.get("textarea").clear().type("Wash dishes\nBe awesome");
+    cy.get("input, textarea").clear().type("Wash dishes\nBe awesome");
     cy.get("button[type=submit]").click();
     cy.get("li").should(($li) => {
       expect($li).to.have.length(2);
@@ -36,4 +36,5 @@ describe("Todo App - Bonus", () => {
       expect($li[1]).to.contain("Be awesome");
     });
   });
+  
 });
