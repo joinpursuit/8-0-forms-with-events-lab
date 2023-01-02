@@ -1,0 +1,32 @@
+body {
+    margin:50px 0px; padding:0px;
+    text-align: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: #FFe87c;
+}
+
+#search {
+    width: 30em;
+   font-size: 25px;
+}
+
+button{
+   font-size: 20px;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: solid green;
+    border-radius: 15px;
+    background-color: palevioletred;
+    color: aliceblue;
+    margin-left: 10px;
+}
+
+ul {
+display: table;
+margin: 0 auto;
+padding-top: 20px;
+font-size: 24px;
+}
+
+.strike {
+    text-decoration: line-through solid rgb(0, 0, 0);
+  }
