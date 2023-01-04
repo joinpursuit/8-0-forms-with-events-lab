@@ -26,7 +26,7 @@ const li = document.querySelector("li")
 const submit = document.querySelector("button")
 
 // ** A more condensed one liner way to write the .addEventListener 
-// Instead of splitting the doucmnet.querySelector("button") line from the form.addEventlistener line of code.**
+// Instead of splitting the document.querySelector("button") line from the form.addEventlistener line of code.**
 //  document.querySelector("button").form.addEventListener("submit", (event)=> {
 //     event.preventDefault()
 //  const thisInput =  document.querySelector("input") - ** Create a variable to store the value of our HTML input element**
