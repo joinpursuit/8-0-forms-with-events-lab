@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+button {
+    border-radius: 10px;
+    background: lightgreen;
+    box-shadow: 2px 2px 2px green;
+}
+
+input#todoText {
+    border-radius: 10px;
+}
+
+p.error {
+    text-align: center;
+    font-weight: bold;
+}
+
+li {
+    font-size: 24px;
+    list-style: none;
+    width: 22vw;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.deleteButton {
+    position: relative;
+    width: 42px;
+    height: 20px;
+    text-decoration: none !important;
+    margin-right: 15px;
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px;
+}
+
+.todoLine {
+    border: 1px solid black;
+    width: 80%;
+}
+

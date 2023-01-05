@@ -77,7 +77,7 @@ And the following functionalities:
   1. You will need to add an event listener to all the `li` elements. Those `li` elements have yet to be created. How can you add an event listener to these?
   2. How can you only affect the `li` that was clicked on?
 
-  </details>
+  </details> 
 
 ## Sample
 
