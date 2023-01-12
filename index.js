@@ -1,8 +1,6 @@
 //console.log("Code your solution!")
 //document.forms.submit 
 
-
-
 const form = document.querySelector("form");
 
 const ul = document.querySelector("ul"); //but why should i need to do this if I already have a ul? Because that is what I am doing here: Selecting the ul, not creating it. It is just a short hand way to talk about it. Otherwise, I would be writing document.querySelector("ul").append(li)
@@ -35,12 +33,12 @@ form.addEventListener("submit", (e) => {
      console.log("The li is:" , li)
     }
 
-
-    li.addEventListener(("click",(e) => {
+    li.addEventListener("click", (e) => {
         e.preventDefault();
-        console.log("this was clicked")
-        li.style.textdecoration = "line-through"
-    }))
+        console.log("clicked")
+        li.style.textDecoration = "line-through";
+    })
+    
     })
 
 // if any of the list items are clicked, they should be crossed out
@@ -98,9 +96,4 @@ Hints/Steps
 
 Hints/Steps
 When the user clicks on one of the li items, the item should be crossed out, indicating that that to-do is complete. You will need to look at [element].style.textDecoration for the cross out effect. Look at all the different text decoration options.
-
-Hints/Steps
-Sample
-
-
 */
