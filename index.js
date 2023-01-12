@@ -14,7 +14,7 @@ form.addEventListener("submit", (event) => {
 function addListItem(event) {
      //Creates new list item and gives it the value of the input box
     const newTodo = document.createElement("li");
-    newTodo.textContent = event.target.todo.value:
+    newTodo.textContent = event.target.todo.value;
 
     //Clears the input box
     form.reset();
