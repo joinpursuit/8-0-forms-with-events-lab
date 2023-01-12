@@ -5,36 +5,69 @@
 
 const form = document.querySelector("form");
 
+const ul = document.querySelector("ul"); //but why should i need to do this if I already have a ul? Because that is what I am doing here: Selecting the ul, not creating it. It is just a short hand way to talk about it. Otherwise, I would be writing document.querySelector("ul").append(li)
+
 form.addEventListener("submit", (e) => {
-    event.preventDefault(); //forgot this
+    e.preventDefault(); //forgot this
+    
+    //create a variable that allows you to create a list item. This has to be inside of the function or it won't add to the list, but just keep replacing the first item. 
+    const li = document.createElement("li")  
+
     console.log("You pressed the button")  //did this happen?
-    if(event.target.todo.value === ""){
+    
+    if(e.target.todo.value === ""){
         const p = document.createElement("p");
         p.innerText="Nice try, but you need to do something"
         form.after(p)
-    } else if (event.target.todo.value === "something"){
+    } else if (e.target.todo.value === "something"){
         const p = document.createElement("p");
         p.innerText="Very funny. Try again."
         hr = document.querySelector("HR")
         hr.prepend(p)
     } else {
-    const li = document.createElement("li")  //create a variable that allows you to create a list item
-     li.textContent =  event.target.todo.value;  //create a list item and put the information submitted into the new <li>
-     
-     const ul = document.querySelector("ul"); //but why should i need to do this if I already have a ul? Because that is what I am doing here: Selecting the ul, not creating it. It is just a short hand way to talk about it. Otherwise, I would be writing document.querySelector("ul").append(li)
+
+     li.textContent =  e.target.todo.value;  //create a list item and put the information submitted into the new <li>
+    
+     li.classList = "toDoItem"  //in case I need a class later
+
      ul.append(li); //put the new <li> into the list
+
      console.log("The li is:" , li)
     }
+
+
+    li.addEventListener(("click",(e) => {
+        e.preventDefault();
+        console.log("this was clicked")
+        li.style.textdecoration = "line-through"
+    }))
     })
 
 // if any of the list items are clicked, they should be crossed out
 
-const didSomething = document.querySelector("li");
+// const line = document.querySelector("li");
 
-didSomething.addEventListener("click",(e)=>{
-    const crossOff = document.querySelector("li");
-    crossOff.style.textDecoration="line-through"
-    });
+// line.addEventListener("click", () => {
+//     e.preventDefault()
+
+//     alert("cross this out")
+// })
+
+// tagNames.style.text
+//  = "line-through"
+// console.log(toDo)
+
+
+//const toDo = document.querySelectorAll(".toDoItem")
+// const el = document.getElementsByTagName("li");
+// el.addEventListener("click", function(){
+// } )
+
+// const didSomething = document.querySelector("li");
+// didSomething.addEventListener("click",(e)=>{
+//     const crossOff = document.querySelector("li");
+//     crossOff.style.textDecoration="line-through"
+//     });
  
 
 
