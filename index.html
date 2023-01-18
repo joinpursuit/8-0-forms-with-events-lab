@@ -1,8 +1,18 @@
 <html>
     <head>
-      <script src="index.js"></script>
+      <meta charset="UTF-8">
+      <script src="index.js" defer></script>
+      <link rel="stylesheet" href="styles.css">
+      <title>To-do List</title>
     </head>
     <body>
-      <h1> CODE YOUR SOLUTION </h1>      
+      <h1> My First To-Do List! </h1>    
+      <form>
+        <label for="listItem">What would you like to add to your to do list?</label>
+        <input type="text" name="listItem" id="listItem">
+        <br/>
+        <button type="submit" name="addItem" id="addItem">Add Item</button>
+        <ul class="todo"></ul>  
+      </form>
     </body>
 </html>
